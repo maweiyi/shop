@@ -14,14 +14,15 @@ spring:
       max-wait: 60000
       time-between-eviction-runs-millis: 60000
       min-evictable-idle-time-millis: 30000
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8000/eureka/
 server:
   port: 8001
-mybatis:
-  config-location: classpath:mybatis-config.xml
-  mapper-locations: classpath:mapperxml/*.xml
 logging:
   config: classpath:logback-spring.xml

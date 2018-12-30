@@ -7,7 +7,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-@MapperScan("me.maweiyi.mapper")
 public class ShopApiApplication {
 
   public static void main(String[] args) {
