@@ -1,5 +1,6 @@
 package me.maweiyi.impl;
 
+import java.util.List;
 import me.maweiyi.entity.NideshopAd;
 import me.maweiyi.repository.NideshopAdRepository;
 import me.maweiyi.service.NideshopAdService;
@@ -15,5 +16,10 @@ public class NideshopAdServiceImpl implements NideshopAdService {
   @Override
   public NideshopAd findById(Integer id) {
     return nideshopAdRepository.getOne(id);
+  }
+
+  @Override
+  public List<NideshopAd> findAll() {
+    return nideshopAdRepository.findAll();
   }
 }

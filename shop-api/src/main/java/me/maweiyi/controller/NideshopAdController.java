@@ -1,8 +1,10 @@
 package me.maweiyi.controller;
 
 
-import me.maweiyi.entity.NideshopAd;
-import me.maweiyi.service.NideshopAdService;
+import java.util.List;
+import me.maweiyi.entity.NideshopCategory;
+import me.maweiyi.service.NideshopCategoryService;
+import me.maweiyi.service.NideshopGoodsService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,12 +18,14 @@ public class NideshopAdController {
   private static final Logger LOGGER = LoggerFactory.getLogger(NideshopAdController.class);
 
   @Autowired
-  NideshopAdService nideshopAdService;
+  private NideshopGoodsService nideshopGoodsService;
 
+  @Autowired
+  private NideshopCategoryService nideshopCategoryService;
   @RequestMapping("/index")
   @ResponseBody
-  public NideshopAd nideshopAd() {
-    return nideshopAdService.findById(1);
+  public List<NideshopCategory> nideshopAd() {
+    return nideshopCategoryService.listNideshopCategoryAndNideshopGoods();
   }
 
 }
