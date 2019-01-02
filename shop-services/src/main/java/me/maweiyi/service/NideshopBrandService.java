@@ -5,4 +5,6 @@ import me.maweiyi.entity.NideshopBrand;
 
 public interface NideshopBrandService {
   List<NideshopBrand> findAll();
+
+  List<NideshopBrand> listNideshopBrandBySortOrder(Integer value);
 }

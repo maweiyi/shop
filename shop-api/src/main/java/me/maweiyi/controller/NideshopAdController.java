@@ -5,6 +5,7 @@ import java.util.List;
 import me.maweiyi.entity.NideshopCategory;
 import me.maweiyi.service.NideshopCategoryService;
 import me.maweiyi.service.NideshopGoodsService;
+import me.maweiyi.util.BaseResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,10 +23,5 @@ public class NideshopAdController {
 
   @Autowired
   private NideshopCategoryService nideshopCategoryService;
-  @RequestMapping("/index")
-  @ResponseBody
-  public List<NideshopCategory> nideshopAd() {
-    return nideshopCategoryService.listNideshopCategoryAndNideshopGoods();
-  }
 
 }

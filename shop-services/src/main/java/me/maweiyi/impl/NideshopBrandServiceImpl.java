@@ -17,4 +17,9 @@ public class NideshopBrandServiceImpl implements NideshopBrandService {
   public List<NideshopBrand> findAll() {
     return nideshopBrandRepository.findAll();
   }
+
+  @Override
+  public List<NideshopBrand> listNideshopBrandBySortOrder(Integer value) {
+    return nideshopBrandRepository.listNideshopBrandBySortOrder(value);
+  }
 }

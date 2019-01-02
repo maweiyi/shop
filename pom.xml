@@ -24,6 +24,7 @@
     <module>shop-api</module>
     <module>shop-dao</module>
     <module>shop-eureka-server</module>
+    <module>shop-util</module>
   </modules>
 
   <dependencyManagement>

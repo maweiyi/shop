@@ -14,6 +14,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+import jdk.nashorn.internal.ir.annotations.Ignore;
 import lombok.Data;
 
 @Data
@@ -65,4 +67,7 @@ public class NideshopCategory {
 
     @OneToMany( mappedBy = "categoryId", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<NideshopGoods> nideshopGoods = new ArrayList<>();
+
+    @Transient
+    private NideshopCategory nideshopCategory;
 }
